@@ -1,75 +1,29 @@
-name: Question
-description: Ask a question about this project
-title: "[Question]: "
+name: Ask a Question
+description: Do you have a question about the repository, code, or implementation of something in the project? Ask a question.
 labels: ["question"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to ask a question! We'll try to help you as soon as possible.
-  - type: textarea
-    id: question
+        Before opening a new issue, please check the existing `ISSUES` to see if your question has already been answered.
+  - type: dropdown
     attributes:
-      label: Your Question
-      description: A clear and concise description of your question.
-      placeholder: I would like to know...
+      label: Topic
+      description: What is the topic of your question?
+      multiple: true
+      options:
+        - API
+        - Code
+        - Repository
+        - Contribution
+        - Other
     validations:
       required: true
   - type: textarea
-    id: context
     attributes:
-      label: Context
-      description: Add any context that might help us understand your question better
+      label: Question
+      description: What is your question? Be clear and provide relevant information so others can help you.
       placeholder: |
-        - What are you trying to accomplish?
-        - What have you tried so far?
-        - What documentation have you already reviewed?
+        I couldn't understand how to...
     validations:
-      required: false
-  - type: dropdown
-    id: environment
-    attributes:
-      label: Environment (if relevant)
-      description: What environment are you working in?
-      multiple: true
-      options:
-        - Windows
-        - macOS
-        - Linux
-        - Web Browser
-        - Mobile App
-    validations:
-      required: false
-  - type: dropdown
-    id: app-version
-    attributes:
-      label: Application Version (if relevant)
-      description: What version of the application are you using?
-      options:
-        - Latest Release
-        - Specific Version (please specify in additional information)
-        - Development/Edge Version
-    validations:
-      required: false
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Screenshots
-      description: If applicable, add screenshots to help explain your question.
-    validations:
-      required: false
-  - type: textarea
-    id: additional-info
-    attributes:
-      label: Additional Information
-      description: Add any other information that might be relevant to your question.
-    validations:
-      required: false
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this question, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      required: true
